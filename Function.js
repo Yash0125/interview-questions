@@ -99,7 +99,7 @@ var fun=function(){
 }
 
 // we get undefined
-// in global scopr we have value 21 but in our local scope x is already present
+// in global scope we have value 21 but in our local scope x is already present
 
 // Q-8 spread and rest operator 
 

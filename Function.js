@@ -127,3 +127,23 @@ document.addEventListener("click",function(){
 // 4. this keyword
 
 
+// First-Class Functions: In JavaScript, functions are first-class citizens, which means they can be treated just like any other value, such as numbers, strings, or objects. They can be assigned to variables, passed as arguments to functions, returned from functions, and stored in data structures.
+
+
+// Higher-Order Functions: A higher-order function is a function that takes one or more functions as arguments and/or returns a function as its result. It leverages the concept of first-class functions to enhance its functionality and provide flexibility in working with functions.
+
+function mathOperation(operation, a, b) {
+    return operation(a, b);
+  }
+  
+  function add(x, y) {
+    return x + y;
+  }
+  
+  function multiply(x, y) {
+    return x * y;
+  }
+  
+  const result1 = mathOperation(add, 3, 5); // Result will be 8 (3 + 5)
+  const result2 = mathOperation(multiply, 2, 4); // Result will be 8 (2 * 4)
+  

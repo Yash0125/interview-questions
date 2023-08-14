@@ -204,3 +204,28 @@ console.log("end")
 
 // In case of function it will call after middle so first start,middle then fn() call 1 will o/p then resolve in -microtask queue then end and success
 
+// Q5. Output
+function job() {
+    return new Promise(function (res, rej) {
+        rej();
+    })
+}
+
+let p1 = job();
+
+p1
+    .then(function () {
+        console.log("success1")
+    })
+    .then(function () {
+        console.log("success2")
+    })
+    .then(function () {
+        console.log("success3")
+    })
+    .catch(function () {
+        console.log("error1");
+    })
+    .then(function () {
+        console.log("success 4");
+    }) // Erro1, success 4

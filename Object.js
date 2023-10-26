@@ -251,3 +251,21 @@ function concatArray(obj){
 }
 
 console.log(concatArray(obj))
+
+
+// Q-4 - get total of number
+
+let array = [{a:5}, {b:10}, {c:15}];
+
+
+function getTotal(array){
+    let total=0
+    for(let i = 0; i < array.length; i++){
+        for(let key in array[i]){
+            total = total + array[i][key]
+        }
+    }
+    return total
+}
+
+console.log(getTotal(array))

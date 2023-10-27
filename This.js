@@ -111,3 +111,19 @@ const calc = {
 
 const result = calc.add(10).multiply(5).substract(30).add(10);
 console.log(result.total);
+
+
+// o/p based question 
+
+var obj1 = {
+    x: 2,
+    foo: {
+      x: 1,
+      bar: function () {
+        return this.x;
+      },
+    },
+  };
+var func = obj1.foo.bar;
+console.log(func()); // undefined
+console.log(obj1.foo.bar());  // 1

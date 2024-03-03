@@ -269,3 +269,19 @@ function getTotal(array){
 }
 
 console.log(getTotal(array))
+
+
+// interview que from YT
+
+// solve [1,2] 
+// expected op=>[ { 1: 1, 2 : 2 } ]
+
+let nums = [1,2]
+
+var maxSubArray = function(nums) {
+    return nums.map((el)=>{
+        return {[el]:el}
+    })
+};
+
+console.log(maxSubArray(nums))

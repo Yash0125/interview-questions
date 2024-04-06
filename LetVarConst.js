@@ -44,6 +44,26 @@ function test() {
 
 test()// we get Hi and hello. but in case of var we get hi
 
+function mixedScopeExample() {
+    var x = 10; // var is function-scoped
+    let y = 20; // let is block-scoped
+    const z = 30; // const is block-scoped and cannot be reassigned
+  
+    if (true) {
+      var a = 40; // var behaves like block scope within a block due to let or const presence
+      let b = 50; // let is block-scoped
+      const c = 60; // const is block-scoped
+      console.log("Inside block:", a, b, c); // Accessible
+    }
+  
+    console.log("Outside block:", a); // Accessible (var behaves like block scope within function)
+    // console.log("Outside block:", b, c); // These lines would result in an error since b and c are not defined here
+  
+    console.log("Inside function:", x, y, z); // Accessible
+  }
+  
+  mixedScopeExample();
+
 function func() {
     var a = 'Hello';
     let b = 'Yash';
